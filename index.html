@@ -1,14 +1,58 @@
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Change Calculator</title>
-  </head>
-  <body>
-    <!-- Write your markup here -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Change Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-    <!-- Don't forget to add your <script> tag here -->
+  <div class="calculator-card">
+    <h1>Change Calculator</h1>
 
-  </body>
+    <div class="form-group">
+      <label for="amount-due">Amount Due</label>
+      <input type="number" id="amount-due" step="0.01" placeholder="0.00" />
+    </div>
+
+    <div class="form-group">
+      <label for="amount-received">Amount Received</label>
+      <input type="number" id="amount-received" step="0.01" placeholder="0.00" />
+    </div>
+
+    <button id="calculate-change">Calculate Change</button>
+
+    <div id="results" class="change-display">
+      <div class="dollar-bill">
+        <span class="coin-label">Dollars</span>
+        <p id="dollars-output">0</p>
+      </div>
+
+      <div class="coins-row">
+        <div class="coin silver">
+          <span class="coin-label">Quarters</span>
+          <p id="quarters-output">0</p>
+        </div>
+
+        <div class="coin silver">
+          <span class="coin-label">Dimes</span>
+          <p id="dimes-output">0</p>
+        </div>
+
+        <div class="coin silver">
+          <span class="coin-label">Nickels</span>
+          <p id="nickels-output">0</p>
+        </div>
+
+        <div class="coin copper">
+          <span class="coin-label">Pennies</span>
+          <p id="pennies-output">0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
 </html>
